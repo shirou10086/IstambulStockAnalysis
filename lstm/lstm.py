@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # 读取和清理数据
 column_names = ["date", "TL_BASED_ISE", "USD_BASED_ISE", "SP", "DAX", "FTSE", "NIKKEI", "BOVESPA", "EU", "EM"]
-data = pd.read_csv('data_akbilgic.csv', names=column_names, header=1)
+data = pd.read_csv('../data/data_akbilgic.csv', names=column_names, header=1)
 data = data.drop(columns=["SP", "DAX", "FTSE", "NIKKEI", "BOVESPA", "EU", "EM"])
 data['date'] = pd.to_datetime(data['date'], format='%d-%b-%y')
 data.set_index('date', inplace=True)

@@ -6,7 +6,7 @@ from keras.layers import LSTM, Dense, Dropout
 import matplotlib.pyplot as plt
 
 # 读取和清理数据
-data = pd.read_csv('Tesla.csv')
+data = pd.read_csv('../data/Tesla.csv')
 data['Date'] = pd.to_datetime(data['Date'], format='%m/%d/%Y')
 data.set_index('Date', inplace=True)
 

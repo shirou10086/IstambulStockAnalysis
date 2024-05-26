@@ -19,7 +19,7 @@ parser.add_argument('--wd', type=float, default=1e-5, help='Weight decay (L2 los
 parser.add_argument('--hidden', type=int, default=16, help='Dimension of representations')
 parser.add_argument('--layer', type=int, default=2, help='Num of layers')
 parser.add_argument('--n-test', type=int, default=300, help='Size of test set')
-parser.add_argument('--data-file', type=str, default='tesla.csv', help='Data file')
+parser.add_argument('--data-file', type=str, default='../data/Tesla.csv', help='Data file')
 
 args = parser.parse_args()
 args.cuda = args.use_cuda and torch.cuda.is_available()
